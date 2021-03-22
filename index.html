@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet'>
+<style type="text/css">
+
+
+#pricing-table {
+	margin: 100px auto;
+	text-align: center;
+	width: 670px; /* total computed width = 222 x 3 + 222 + 4 */
+}
+
+#pricing-table .plan {
+	font: 12px 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;
+	text-shadow: 0 1px rgba(255,255,255,.8);        
+	background: #fff;      
+	border: 1px solid #ddd;
+	color: #333;
+	padding: 20px;
+	width: 180px; /* plan width = 180 + 20 + 20 + 1 + 1 = 222px */      
+	float: left;
+	position: relative;
+}
+
+#pricing-table #most-popular {
+	z-index: 2;
+	top: -13px;
+	border-width: 3px;
+	padding: 30px 20px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);
+	-webkit-box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);
+	box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);    
+}
+
+#pricing-table .plan:nth-child(1) {
+	-moz-border-radius: 5px 0 0 5px;
+	-webkit-border-radius: 5px 0 0 5px;
+	border-radius: 5px 0 0 5px;        
+}
+
+#pricing-table .plan:nth-child(4) {
+	-moz-border-radius: 0 5px 5px 0;
+	-webkit-border-radius: 0 5px 5px 0;
+	border-radius: 0 5px 5px 0;        
+}
+
+/* --------------- */	
+
+#pricing-table h3 {
+	font-size: 20px;
+	font-weight: normal;
+	padding: 20px;
+	margin: -20px -20px 50px -20px;
+	background-color: #eee;
+	background-image: -moz-linear-gradient(#fff,#eee);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));    
+	background-image: -webkit-linear-gradient(#fff, #eee);
+	background-image: -o-linear-gradient(#fff, #eee);
+	background-image: -ms-linear-gradient(#fff, #eee);
+	background-image: linear-gradient(#fff, #eee);
+}
+
+#pricing-table #most-popular h3 {
+	background-color: #ddd;
+	background-image: -moz-linear-gradient(#eee,#ddd);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ddd));    
+	background-image: -webkit-linear-gradient(#eee, #ddd);
+	background-image: -o-linear-gradient(#eee, #ddd);
+	background-image: -ms-linear-gradient(#eee, #ddd);
+	background-image: linear-gradient(#eee, #ddd);
+	margin-top: -30px;
+	padding-top: 30px;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0; 		
+}
+
+#pricing-table .plan:nth-child(1) h3 {
+	-moz-border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	border-radius: 5px 0 0 0;       
+}
+
+#pricing-table .plan:nth-child(4) h3 {
+	-moz-border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	border-radius: 0 5px 0 0;       
+}	
+
+#pricing-table h3 span {
+	display: block;
+	font: bold 25px/100px Georgia, Serif;
+	color: #777;
+	background: #fff;
+	border: 5px solid #fff;
+	height: 100px;
+	width: 100px;
+	margin: 10px auto -65px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+	-moz-box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
+	-webkit-box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
+	box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
+}
+
+/* --------------- */
+
+#pricing-table ul {
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+#pricing-table li {
+	border-top: 1px solid #ddd;
+	padding: 10px 0;
+}
+
+/* --------------- */
+	
+#pricing-table .signup {
+	position: relative;
+	padding: 8px 20px;
+	margin: 20px 0 0 0;  
+	color: #fff;
+	font: bold 14px Arial, Helvetica;
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-block;       
+	background-color: #72ce3f;
+	background-image: -moz-linear-gradient(#72ce3f, #62bc30);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#72ce3f), to(#62bc30));    
+	background-image: -webkit-linear-gradient(#72ce3f, #62bc30);
+	background-image: -o-linear-gradient(#72ce3f, #62bc30);
+	background-image: -ms-linear-gradient(#72ce3f, #62bc30);
+	background-image: linear-gradient(#72ce3f, #62bc30);
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;     
+	text-shadow: 0 1px 0 rgba(0,0,0,.3);        
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5), 0 2px 0 rgba(0, 0, 0, .7);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5), 0 2px 0 rgba(0, 0, 0, .7);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .5), 0 2px 0 rgba(0, 0, 0, .7);
+}
+
+#pricing-table .signup:hover {
+	background-color: #62bc30;
+	background-image: -moz-linear-gradient(#62bc30, #72ce3f);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#62bc30), to(#72ce3f));      
+	background-image: -webkit-linear-gradient(#62bc30, #72ce3f);
+	background-image: -o-linear-gradient(#62bc30, #72ce3f);
+	background-image: -ms-linear-gradient(#62bc30, #72ce3f);
+	background-image: linear-gradient(#62bc30, #72ce3f); 
+}
+
+#pricing-table .signup:active, #pricing-table .signup:focus {
+	background: #62bc30;       
+	top: 2px;
+	-moz-box-shadow: 0 0 3px rgba(0, 0, 0, .7) inset;
+	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .7) inset;
+	box-shadow: 0 0 3px rgba(0, 0, 0, .7) inset; 
+}
+
+/* --------------- */
+
+.clear:before, .clear:after {
+  content:"";
+  display:table
+}
+
+.clear:after {
+  clear:both
+}
+
+.clear {
+  zoom:1
+}
+  body{
+       background-color: lightgrey;
+  }
+  #BODY1{
+	     background-color: #35459C;
+	     width: 800px;
+	     height: 400px;
+	     position:absolute;
+	     left:calc(50% - 400px);
+	     top:0;
+	}
+
+	#section8{
+      height: 400px;
+      background-color: black;
+	}
+	.sections{
+	     position:relative;
+	     height: auto;
+	     top:0px;
+	     width: 100%;
+	     background-color: lightgrey;
+	     z-index: 1;
+	}
+	.space50{
+	  position:relative;
+	  height: 50px;
+	  width:100%;
+	  background-color: transparent;
+	  display: block;
+	}
+	.space100{
+	  position:relative;
+	  height: 100px;
+	  width:100%;
+	  background-color: transparent;
+	  display: block;
+	}
+		.spaceW100{
+	  position:relative;
+	  height: 100px;
+	  width:100%;
+	  background-color: white;
+	  display: block;
+	}
+			.spaceW160{
+	  position:relative;
+	  height: 160px;
+	  width:100%;
+	  background-color: white;
+	  display: block;
+	}
+	.spaceW400{
+	  position:relative;
+	  height: 400px;
+	  width:100%;
+	  background-color: white;
+	  display: block;
+	}
+	.boxSm{
+	 width: 100px;    
+	 height: 100px;
+	 display: block;
+	 position:relative;
+	 margin-left:calc(33% - 200px);
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 display:inline-block;
+	 z-index:3;
+	}
+	
+	.boxBg{
+	 width: 400px;    
+	 height: 400px;
+	 display: block;
+	 position:relative;
+	 margin-left:calc(50% - 135px);
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	}
+	
+
+	.box1{ background-image: url(imgs/box1.svg);}
+	.box2{ background-image: url(imgs/box2.svg);}
+	.box3{ background-image: url(imgs/box3.svg);}
+	.box4{ background-image: url(imgs/box4.svg);}
+	.box5{ background-image: url(imgs/box5.svg);}
+	
+	.slide{ 
+	  background-image: url(imgs/slide.svg);
+	  height:80px;
+	  margin-left:-130px;
+	  z-index:2;
+	  display:inline-block;
+	}
+	
+
+	
+	#botGuy{ background-image: url(imgs/bottom2.svg);  width:100%; bottom:0;height: 500px;}
+
+	.cloudup{
+	   background-image: url(imgs/cloudUp.svg);
+	   bottom:0;
+	   height:130px;
+	}
+	.clouddown{
+	  background-image: url(imgs/cloudDown.svg);
+	  height:200px;
+	}
+	.contCloud{
+	  z-index: 2;
+	  height:0;
+	  overflow: visible;
+	  width:100%;
+	  position:relative;
+	}
+	.sections{ 
+	    background-image: url(imgs/gradbluegreen1.svg); 	 
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    z-index: 1;
+	}
+	.svg{
+	  width:100%;
+	  position:absolute;
+	  background-repeat: no-repeat;
+	}
+	.subtitles{
+	  color:white;
+	  font-family:"Arial Black", Gadget, Arial, sans-serif;
+    font-size: 45px;
+    margin-left:110px;
+     position:relative;
+     bottom:36px;
+	}
+
+	.centerTxt{ 
+	  text-align: center;
+	  margin-left:0;
+	  font-size:70px;
+	}
+	
+	
+	.footCont{
+	    background-color:white;
+     position:relative;
+     width:100%;
+     height:auto;
+    
+	  
+	}
+		.foot{ 
+		  margin:0;
+		  width:100%;
+		  height:550px;
+		}
+		
+		#footm1{ 		  background-image: url(imgs/techsupport.svg); }
+		#footm2{ 		  background-image: url(imgs/datamgmt.svg);}
+		#footm3{ 		  background-image: url(imgs/accessibility.svg);}
+		#footm4{ 		  background-image: url(imgs/awsimp.svg);}
+		#footm5{ 		  background-image: url(imgs/adminsec.svg);}
+
+    .tableL{
+      width:800px;
+      height:200px;
+      margin: auto;
+      padding: 50px;
+      //padding-right: 200px;
+      border-spacing:20px;
+      
+      font-family:Georgia, serif; //font-style: italic;
+      //font-family: Proxima Nova Light;
+      
+      
+      color:#333;
+    }
+
+.tableR{
+      width:800px;
+      height:200px;
+      margin: auto;
+      padding: 20px;
+      padding-left: 0px;
+      border-spacing: 10px;
+      font-family:Georgia, serif; //font-style: italic;
+    }
+  .cell{ padding:15px;  border: 1px solid lightgrey; vertical-align: top; }
+	
+  td{ width: 50% }
+  .textblock{
+	    text-align: justify;
+      text-justify: inter-word;
+      color:#999;
+	}
+h3{ text-align: center;font-family: 'Yellowtail'; font-size: 30px;}
+	
+.bullet{
+	 width: 100px;    
+	 height: 100px;
+	 display: inline-block;
+	 position:absolute;
+	 left: calc(50% - 27.5px);
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 display:inline-block;
+	 z-index:3;
+	 top:-14px;
+	 
+}	
+.contBullet{
+  background-color:black;
+height:50px;	
+border:1px solid black;
+ background-image: url(imgs/gradbluegreen1.svg); 	 
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    border-radius:50px;
+}
+
+.tabBorSp1{
+  
+  border-spacing: 10px;
+}
+.smallText{
+font-size: 12px;  
+}	
+
+.marginB70{
+
+height: 50px;  
+
+}
+
+
+.marginB20{
+
+height: 20px;  
+
+}
+
+.setRight{
+  
+  border-spacing: 30px;
+  
+  padding:0;
+    margin: auto;
+}
+
+.cell2{
+  width:160px;
+   vertical-align: top;
+   
+  
+}
+
+
+a{
+  color:lightgrey;
+  text-decoration:none;
+  background-color:rgba(0,0,0, 0.8);
+}
+
+a:hover{
+  color:white;
+  
+}
+#footer{
+  width:100%;
+  
+    color:white;
+      height:200px;
+      margin: auto;
+      border-spacing: 20px;
+      font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 30.4px;
+      background-color:rgba(0,0,0, 0.7);
+}
+
+#tablebox{
+  position:absolute;
+  bottom:153px;
+}
+
+
+
+.quoteTitle{
+ font-size: 54px; font-style: normal; font-variant: normal;  line-height: 20px;
+  color:grey;
+   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; 
+  text-align:center;
+  width:100%;
+  left:0;
+  position:absolute;
+}
+
+.quoteA{
+position:absolute;
+top:-10px;
+color:rgba(0,0,0, 0.8);
+}
+
+.quoteB{
+  font-size: 24px;
+  top:80px;
+  color:rgba(0,0,0, 0.6);
+}
+
+.quoteC{
+  font-size: 15px;
+  top:130px;
+  color:rgba(0,0,0, 0.3);
+}
+
+</style>
+</head>
+<body>
+<div id="BODY1">
+  <img src="imgs/TEST2.svg" alt="top-logo-1">
+  <div id="cloudA1"  class="contCloud" ><div class="svg cloudup"></div></div>
+  <div class="spaceW160">
+        <p class="quoteTitle quoteA">Boost your WebApp</p>
+        <p class="quoteTitle quoteB">Focus on your Core Competencies</p>
+        <p class="quoteTitle quoteC"><strong>We Got The Rest.</strong></p>
+  </div>
+  <div id="cloudA2"   class="contCloud" ><div class="svg clouddown"></div></div>
+  <div id="section1" class="sections gradFire">
+      <div class="space100"></div>
+      <div class="space100"></div>
+      <a href="#section2"><div><div class="box1 boxSm"></div> <div class="slide svg"><p class="subtitles">TECH SUPPORT</p></div></div></a>
+      <a href="#section3"><div><div class="box2 boxSm"></div> <div class="slide svg"><p class="subtitles">DATA MANAGEMENT</p></div></div></a>
+      <a href="#section4"><div><div class="box3 boxSm"></div> <div class="slide svg"><p class="subtitles">ACCESSIBILITY</p></div></div></a>
+      <a href="#section5"><div><div class="box4 boxSm"></div> <div class="slide svg"><p class="subtitles">AWS IMPLEMENTATION</p></div></div></a>
+      <a href="#section6"><div><div class="box5 boxSm"></div> <div class="slide svg"><p class="subtitles">AUTHENTICATION</p></div></div></a>
+      <div class="space100"></div>
+  </div>
+  
+  
+  
+  
+  <div id="cloudB1"  class="contCloud" ><div class="svg cloudup"></div></div>
+    <div class="spaceW160">
+        <p class="quoteTitle quoteA">Troubleshooting Experts</p>
+        <p class="quoteTitle quoteB">The advance of technology is based on making it fit in so that you don't really even notice it, so it's part of everyday life</p>
+        <p class="quoteTitle quoteC"><strong>BILL GATES</strong></p>
+  </div>
+  <div id="cloudB2"   class="contCloud" ><div class="svg clouddown"></div></div>
+  <div id="section2" class="sections gradFire">
+      <div class="space100"></div>
+      <div class="space50"></div>
+      <div class="box1 boxBg"></div>
+      <p class="subtitles centerTxt">TECH SUPPORT</p>
+      <div class="space50"></div>
+  </div>
+  
+  
+  
+  <div id="cloudC1"  class="contCloud" ><div class="svg cloudup"></div></div>
+  <div class="footCont">
+     <table id="table1"  class="tableL"><tr><td class="cell">       
+           <div class="contCloud contBullet" ><div class="box1 bullet"></div></div>
+           <h3>SUPPORT YOUR NEEDS</h3> <p class="textblock">Greater than 99% server uptime doesn't mean your application can't have hiccups of its own. If anything goes up in flames, we will be there with the fire extinguisher to help you get up and running again with minimal delay.</p>
+    </td><td class="cell">
+      <div class="contCloud contBullet" ><div class="box1 bullet"></div></div>
+      <h3>SUPPORT YOUR CUSTOMERS</h3> <p class="textblock">In addition to insulating webapp production from technical difficulties of your own, wouldn't it be great to streamline technical support to include your customers as well? Our handsfree technical support feature lets webapp owners optimize the time spent using core competencies.</p>
+    </td></tr><tr><td class="cell">
+      <div class="contCloud contBullet" ><div class="box1 bullet"></div></div>
+      <h3>SOFTWARE UPGRADES</h3> <p class="textblock">Harmful malware can take advantage of software vulnerabilities in operating systems, which is why we don't procrastinate providing software updates. This is one of the most essential steps in protecting your infrastructure. In addition to security fixes, software updates can also include new or improved features, or enhanced compatibility with different devices or applications, and also improve the stability of your software, and remove outdated features.</p>
+    </td><td class="cell">
+      <div class="contCloud contBullet" ><div class="box1 bullet"></div></div>
+      <h3>CONSULTING</h3><p class="textblock"> By integrating our strategic designers, sophisticated software developers, and business consultants experience into your webapp, we can provide incredible talent, deep collaboration, and fresh perspectives to help you realize your opportunities for growth.</p>
+    </td></tr></table>
+    <div id="footm1" class="foot boxBg"></div></div>
+    
+     
+    
+    
+  <div id="cloudB1B"  class="contCloud" ><div class="svg cloudup"></div></div>
+    <div class="spaceW160">
+        <p class="quoteTitle quoteA">Data Aficionados</p>
+        <p class="quoteTitle quoteB">Passion provides purpose, but data drives decisions</p>
+        <p class="quoteTitle quoteC"><strong>ANDY DUNN</strong></p>
+  </div>
+  <div id="cloudC2"   class="contCloud" ><div class="svg clouddown"></div></div>
+  <div id="section3" class="sections gradFire">
+      <div class="space100"></div>
+      <div class="space50"></div>
+      <div class="box2 boxBg"></div>
+      <p class="subtitles centerTxt">DATA MANAGEMENT</p>
+      <div class="space50"></div>
+  </div>
+  
+  
+  
+  
+  <div id="cloudD1"  class="contCloud" ><div class="svg cloudup"></div></div>
+  <div class="footCont">
+    <table id="table2"  class="tableR" ><tr><td class="cell">
+      <div class="contCloud contBullet" ><div class="box2 bullet"></div></div>
+    <h3>DATA REDUNDANCY</h3> 
+    <p class="textblock">
+      Going a step further than simply storing extra copies of your data, redundancy focuses more on the ability to provide a continuity of service, no matter what happens. When catastrophic hardware failures inevitably do occur, your data will be restored without you having to even get your hands dirty.</p>
+    </td><td class="cell">
+      <div class="contCloud contBullet" ><div class="box2 bullet"></div></div>
+      <h3>DATA MANAGER</h3> 
+      <p class="textblock">
+        Project Managers and Developers who prefer to outsource building and managing website databases for their webapps can use our easy access API to experience hassle free data access. Simply define the table, and start sending requests. It's really that simple.</p>
+    </td></tr><tr><td class="cell">
+      <div class="contCloud contBullet" ><div class="box2 bullet"></div></div>
+      <h3>DATA STORAGE</h3> 
+      <p class="textblock">
+                 
+      </p>
+                  <table class="tabBorSp1 setRight">
+                   <tr>
+                     <td class="smallText marginB20">First 50 TB/ month</td>
+                     <td class="smallText"  align="right" >$0.023 / GB</td>
+                   </tr>
+                   <tr>
+                     <td class="smallText marginB20">Next 450 TB/ month</td>
+                     <td class="smallText"  align="right" >$0.022 / GB</td>
+                   </tr>
+                   <tr>
+                     <td class="smallText marginB20">Over 500 TB/ month</td>
+                     <td class="smallText"  align="right" >$0.021 / GB</td>
+                   </tr>
+                   </table>  
+    </td><td class="cell">
+      <div class="contCloud contBullet" ><div class="box2 bullet"></div></div>
+      <h3>DATA COMPUTE</h3> 
+                    <table class="tabBorSp1">
+                       <tr>
+                         <td class="smallText marginB70">Very Low Traffic such as: mini website, static website, or small development server.</td>
+                         <td class="smallText"  align="right" >$8 – $10 / month</td>
+                       </tr>
+                       
+                       <tr>
+                         <td class="smallText marginB70">Low Traffic: Hosting a few WP blogs, corporate websites and landing pages.</td>
+                         <td class="smallText"  align="right" >$20 – $30 / month</td>
+                       </tr>
+                       
+                       <tr>
+                         <td class="smallText marginB70">Moderate Traffic: Web Agencies that host several WordPress sites within a server/VPS.</td>
+                         <td class="smallText"  align="right" >$40 – $50 / month</td>
+                       </tr>
+                       
+                        <tr>
+                         <td class="smallText marginB70">High Traffic: Website or application with a few thousands of users, at least monthly.</td>
+                         <td class="smallText"  align="right" >$60 – $80 / month</td>
+                       </tr>
+                       
+                        <tr>
+                         <td class="smallText marginB70">Very High Traffic: Maintaining Websites and/or applications with many thousands of users per month.</td>
+                         <td class="smallText"  align="right" >$300 – $ 700 / month</td>
+                       </tr>
+                        <tr>
+                         <td class="smallText marginB70">Unicorn Traffic: Millions of users.</td>
+                         <td class="smallText"  align="right" ><a href="mailto:support@webapphosts.com">Request a Quote</a>.</td>
+                       </tr>
+                       </table>  
+    </td></tr></table>
+    <div id="footm2" class="foot boxBg"></div></div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  <div id="cloudC1B"  class="contCloud" ><div class="svg cloudup"></div></div>
+    <div class="spaceW160">
+        <p class="quoteTitle quoteA">Global Reach</p>
+        <p class="quoteTitle quoteB">While technology is important, it's what we do with it that truly matters.</p>
+        <p class="quoteTitle quoteC"><strong>MUHAMMAD YUNUS</strong></p>
+  </div>
+  <div id="cloudD2"   class="contCloud" ><div class="svg clouddown"></div></div>
+  <div id="section4" class="sections gradFire">
+      <div class="space100"></div>
+      <div class="space50"></div>
+      <div class="box3 boxBg"></div>
+      <p class="subtitles centerTxt">ACCESSIBILITY</p>
+      <div class="space50"></div>
+  </div>
+
+
+  <div id="cloudE1"  class="contCloud" ><div class="svg cloudup"></div></div>
+  <div class="footCont">
+    <table id="table3" class="tableL" ><tr><td class="cell">
+      <div class="contCloud contBullet" ><div class="box3 bullet"></div></div>
+      <h3>GLOBAL REACH</h3> 
+       <p class="textblock">
+         Spanning 55 availability zones and 18 geographic regions, you can make sure your website is fast when and where it needs to be, tailored specifically to your budget.</p>
+    </td><td class="cell">
+      <div class="contCloud contBullet" ><div class="box3 bullet"></div></div>
+      <h3>SERVER REDUNDANCY</h3> 
+       <p class="textblock">
+         Server redundancy refers to the ability of a computing infrastructure to provide additional servers that may be deployed on runtime for backup, load balancing or temporarily halting a primary server for maintenance purposes.</p>
+    </td></tr><tr><td class="cell">
+      <div class="contCloud contBullet" ><div class="box3 bullet"></div></div>
+      <h3>UPTIME GREATER THAN 99.9%</h3> 
+       <p class="textblock">
+         <strong><i>Webapp Hosts</i></strong> will use commercially reasonable efforts to maintain a Monthly Uptime Percentage (defined below) of at least 99%, in each case during any monthly billing cycle.</p>
+    </td><td class="cell">
+      <div class="contCloud contBullet" ><div class="box3 bullet"></div></div>
+      <h3>ACCESS CONTROL</h3> 
+       <p class="textblock">
+        Access your services and resources securely.  Control user- and group-permissions effortlessly. 
+        </p>
+    </td></tr></table>
+    <div id="footm4" class="foot boxBg"></div></div>
+  <div id="cloudE1B"  class="contCloud" ><div class="svg cloudup"></div></div>
+    <div class="spaceW160">
+        <p class="quoteTitle quoteA">IaaS</p>
+        <p class="quoteTitle quoteB">It's important to have a sound idea, but the really important thing is the implementation</p>
+        <p class="quoteTitle quoteC"><strong>WILBER ROSS</strong></p>
+  </div>
+  <div id="cloudE2"   class="contCloud" ><div class="svg clouddown"></div></div>
+  <div id="section5" class="sections gradFire">
+      <div class="space100"></div>
+      <div class="space50"></div>
+      <div class="box4 boxBg"></div>
+      <p class="subtitles centerTxt">AWS IMPLEMENTATION</p>
+      <div class="space50"></div>
+  </div>
+  
+  
+
+  
+  
+  <div id="cloudF1"  class="contCloud" ><div class="svg cloudup"></div></div>
+  <div class="footCont">
+      <table id="table4" class="tableR" ><tr><td class="cell">
+        <div class="contCloud contBullet" ><div class="box4 bullet"></div></div>
+        <h3>SSL CERTIFICATE & HTTPS</h3> 
+         <p class="textblock">
+           HTTPS is more secure than HTTP so it is for good reason that it is increasingly becoming a concern for site traffic. Google's search engine defaults to HTTPS connections and ranks websites higher which use HTTPS. Setting up HTTPS  is as important for your webapp, as it is soul draining and time consuming to implement. We help you get to market as quickly as possible by managing redirections, name servers, and SSL certificate acquisitions.</p>
+    </td><td class="cell">
+      <div class="contCloud contBullet" ><div class="box4 bullet"></div></div>
+      <h3>LOAD BALANCING</h3> 
+       <p class="textblock">
+         Load balancing distributes incoming network traffic efficiently across backend servers without any extra effort. All you need to worry about is getting your Webapp to us, and we will handle the rest.</p>
+    </td></tr><tr><td class="cell">
+      <div class="contCloud contBullet" ><div class="box4 bullet"></div></div>
+      <h3>INFRASTRUCTURE</h3> 
+       <p class="textblock">
+         All operating system policies and protocols necessary to get your webapp off the ground are handled by <strong><i>Webapp Hosts</i></strong>. Setting up Linux instances, launching, installing required software, and cloning previous instances can be done on the fly.</p>
+    </td><td class="cell">
+      <div class="contCloud contBullet" ><div class="box4 bullet"></div></div>
+      <h3>SCALING YOUR WEBAPP</h3> 
+       <p class="textblock">
+         All webapps must balance the opposing demands of response time and demand scalability. Some applications might have acceptable response times but cannot handle more than a certain number of requests. Others might be able to handle requests in large magnitudes but have poor or long response times. We help you automate the delicate balance between scalability and response time for optimal performance.</p>
+    </td></tr></table>  
+  <div id="footm3" class="foot boxBg"></div></div>
+  <div id="cloudD1B"  class="contCloud" ><div class="svg cloudup"></div></div>
+    <div class="spaceW160">
+        <p class="quoteTitle quoteA">Simple Authenticationx`</p>
+        <p class="quoteTitle quoteB">The single biggest existential threat that's out there, I think, is cyber</p>
+        <p class="quoteTitle quoteC"><strong>MICHAEL MULLEN</strong></p>
+  </div>
+  <div id="cloudF2"   class="contCloud" ><div class="svg clouddown"></div></div>
+  <div id="section6" class="sections gradFire">
+      <div class="space100"></div>
+      <div class="space50"></div>
+      <div class="box5 boxBg"></div>
+      <p class="subtitles centerTxt">AUTHENTICATION AND SECURITY</p>
+      <div class="space50"></div>
+  </div>
+  
+  
+  
+  <div id="cloudG1"  class="contCloud" ><div class="svg cloudup"></div></div>
+  <div class="footCont">
+      <table id="table5" class="tableL" ><tr><td class="cell">
+        <div class="contCloud contBullet" ><div class="box5 bullet"></div></div>
+        <h3>AUTHENTICATION & AUTHORIZATION</h3> 
+         <p class="textblock">
+           Authentication and Authorization are essential components of any Webapp that maintains user data. Equally essential is protecting this data, which is no simple task. Our simple API effectively meets these demands for you by managing signup, logins, and passwords. </p>
+    </td><td class="cell">
+      <div class="contCloud contBullet" ><div class="box5 bullet"></div></div>
+      <h3>NETWORK ADMINISTRATION</h3> 
+       <p class="textblock">
+        Reduce costs and time associated with maintaining and protecting network assets by letting <strong><i>Webapp Hosts</i></strong> handle your administration demands. The need for network fortification requires constant villigance. Don't go it alone.</p>
+    </td></tr></table>  
+  <div id="footm5" class="foot boxBg"></div></div>
+  <div id="cloudF1B"  class="contCloud" ><div class="svg cloudup"></div></div>
+      <div class="spaceW160">
+        <p class="quoteTitle quoteA">Farewell!</p>
+        <p class="quoteTitle quoteB">It is not in the stars to hold our destiny but in ourselves</p>
+        <p class="quoteTitle quoteC"><strong>WILLIAM SHAKESPEARE</strong></p>
+  </div>
+  <div id="cloudG2"   class="contCloud" ><div class="svg clouddown"></div></div>
+  <div id="section7" class="sections gradFire">
+    
+      <div class="space100"></div>
+      
+      
+      
+       
+        <div id="pricing-table" class="clear">
+    <div class="plan">
+        <h3>Nano<span>$14.99</span></h3>
+        <a class="signup" href="">Sign up</a>         
+        <ul>
+            <li><b>0.5</b> Mem (GiB)</li>
+            <li><b>$0.023</b> per GiB</li>
+            <li><b>1</b> Availability Zones </li>
+			      <li><b>5 hr</b> Tech Support / m</li>
+			      <li><b>Unlimited</b> Data Management</li>
+			      <li><b>Free</b> Accessibility Package </li>
+			      <li><b>1</b> SSL Certificates </li>
+			      <li><b> 100 users </b> Authentican & Authoriation </li>
+			      
+        </ul> 
+    </div>
+    <div class="plan" id="most-popular">
+        <h3>Micro<span>29.99</span></h3>
+        <a class="signup" href="">Sign up</a>        
+        <ul>
+            <li><b>1</b> Mem (GiB)</li>
+            <li><b>$0.023</b> per GiB</li>
+            <li><b>1</b> Availability Zones </li>
+			      <li><b>10 hr</b> Tech Support / m</li>
+			      <li><b>Unlimited</b> Data Management</li>
+			      <li><b>Free</b> Accessibility Package </li>
+			      <li><b>1</b> SSL Certificates </li>
+			      <li><b> 1000 users </b> Authentican & Authoriation </li>
+        </ul>    
+    </div>
+    <div class="plan">
+        <h3>Small<span>$59.99</span></h3>
+		<a class="signup" href="">Sign up</a>
+        <ul>
+            <li><b>2</b> Mem (GiB)</li>
+            <li><b>$0.023</b> per GiB</li>
+            <li><b>2</b> Availability Zones </li>
+			      <li><b>20 hr</b> Tech Support / m</li>
+			      <li><b>Unlimited</b> Data Management</li>
+			      <li><b>Free</b> Accessibility Package </li>
+			      <li><b>2</b> SSL Certificates </li>
+			      <li><b> 10,000 users </b> Authentican & Authoriation </li>
+        </ul>
+    </div>
+</div>
+        
+      <div class="space100"></div>
+      <div class="space100"></div>
+      <div class="space100"></div>
+      <div class="space100"></div>
+      <div class="space100"></div>
+      
+      <div id="botGuy"  class="svg"></div>
+      <div id="tablebox" class="space100">
+          <table id="footer">
+            <tr>
+              
+               <td class=" cell2">
+                 SERVICES<br>
+                <a href="index.html#section2">TECH SUPPORT</a><br><a href="index.html#section3">DATA MANAGEMENT</a><br><a href="index.html#section4">ACCESSIBILITY</a><br><a href="index.html#section5">AWS IMPLEMENTATION</a><br><a href="index.html#section6">AUTHENTICATION</a>
+              </td>
+              <td align="right" class="cell2">
+                
+© 2018 <strong><i>WebappHosts</i></strong>
+              </td>
+                 
+             
+            </tr>
+          </table>
+          
+          
+      </div>
+  </div>
+  
+  
+
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
